@@ -6,4 +6,9 @@ class Category extends Database
         $sql = "SELECT * FROM `categories`";
         return $this->getData($sql);
     }
+
+    public function create() {
+        $sql = "SELECT * FROM `categories`";
+        return $this->getData($sql);
+    }
 }

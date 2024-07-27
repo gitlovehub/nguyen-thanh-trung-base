@@ -8,20 +8,33 @@
 </head>
 <body>
     <section class="container">
-        <h1 class="text-center text-uppercase">Quan li danh muc</h1>
+        <h1 class="text-center text-uppercase"><?= $title ?></h1>
+
+        <a href="" class="btn btn-primary">Add new</a>
 
         <table class="table table-hover">
             <thead>
                 <tr class="text-uppercase">
                     <th>ID</th>
-                    <th>Category</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th class="col-2 text-center">Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Cate 0</td>
-                </tr>
+                <?php foreach ($data as $item) { ?>
+                    <tr>
+                        <td><?= $item['id']; ?></td>
+                        <td><?= $item['name']; ?></td>
+                        <td>
+                            <?php echo $item['status'] == 1 ? 'Active' : 'Disable'; ?>
+                        </td>
+                        <td class="text-end">
+                            <button class="btn btn-outline-warning">Edit</button>
+                            <button class="btn btn-outline-danger">Disable</button>
+                        </td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
 

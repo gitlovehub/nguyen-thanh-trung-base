@@ -1,0 +1,15 @@
+{
+    "name": "vendorname/package-name",
+    "autoload": {
+        "psr-4": {
+            "Vendorname\\PackageName\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gitlovehub",
+            "email": "hungtd010302@gmail.com"
+        }
+    ],
+    "require": {}
+}
