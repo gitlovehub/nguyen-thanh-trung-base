@@ -2,7 +2,7 @@
     "name": "vendorname/package-name",
     "autoload": {
         "psr-4": {
-            "Vendorname\\PackageName\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [
@@ -11,5 +11,8 @@
             "email": "hungtd010302@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phroute/phroute": "^2.2",
+        "eftec/bladeone": "^4.13"
+    }
 }

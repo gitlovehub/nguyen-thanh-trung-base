@@ -6,5 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Vendorname\\PackageName\\' => array($baseDir . '/src'),
+    'eftec\\bladeone\\' => array($vendorDir . '/eftec/bladeone/lib'),
+    'Phroute\\Phroute\\' => array($vendorDir . '/phroute/phroute/src/Phroute'),
+    'App\\' => array($baseDir . '/app'),
 );
