@@ -2,10 +2,17 @@
 
 namespace App\Models;
 
-class Category extends Database
+class Category extends BaseModel
 {
-    public function selectAll() {
+    public function selectAllCategory() {
         $sql = "SELECT * FROM `categories`";
-        return $this->getData($sql);
+        $this->setQuery($sql);
+        return $this->loadAllRows();
+    }
+
+    public function insertDataCategory($id, $name, $status) {
+        $sql = "INSERT INTO `categories` VALUES (?, ?, ?)";
+        $this->setQuery($sql);
+        return $this->execute([$id, $name, $status]);
     }
 }

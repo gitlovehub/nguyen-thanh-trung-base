@@ -1,11 +1,8 @@
 <?php 
-
+session_start();
 require_once 'env.php';
 require_once 'vendor/autoload.php';
 require_once 'common/route.php';
-// require_once 'models/Database.php';
-// require_once 'models/Category.php';
-// require_once 'controllers/CategoryController.php';
 
 // $url = isset($_GET["url"]) ? $_GET["url"] : "/";
 

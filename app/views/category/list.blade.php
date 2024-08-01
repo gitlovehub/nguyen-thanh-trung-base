@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Category</title>
+    <title>Category − List</title>
 </head>
 <body>
     <section class="container">
-        <h1 class="text-center text-uppercase"><?= $title ?></h1>
+        <h1 class="text-center text-uppercase">Danh sách</h1>
 
-        <a href="" class="btn btn-primary">Add new</a>
+        <a href="{{route('add')}}" class="btn btn-primary">Add new</a>
 
         <table class="table table-hover">
             <thead>
@@ -24,10 +24,10 @@
             <tbody>
                 <?php foreach ($data as $item) { ?>
                     <tr>
-                        <td><?= $item['id']; ?></td>
-                        <td><?= $item['name']; ?></td>
+                        <td><?= $item->id ?></td>
+                        <td><?= $item->name ?></td>
                         <td>
-                            <?php echo $item['status'] == 1 ? 'Active' : 'Disable'; ?>
+                            <?php echo $item->status == 1 ? 'Active' : 'Disable'; ?>
                         </td>
                         <td class="text-end">
                             <button class="btn btn-outline-warning">Edit</button>
