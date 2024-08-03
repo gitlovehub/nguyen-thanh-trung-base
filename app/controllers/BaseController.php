@@ -9,6 +9,4 @@ class BaseController{
         $blade = new BladeOne($viewDir,$storageDir, BladeOne::MODE_DEBUG);
         echo $blade->run($viewFile, $data);
     }
-
-
 }

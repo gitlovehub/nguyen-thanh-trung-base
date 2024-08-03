@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Category − Create</title>
+    <title>Category − Update</title>
 </head>
 <body>
     <section class="container">
-        <h1 class="text-center text-uppercase">Create</h1>
+        <h1 class="text-center text-uppercase">Update</h1>
 
         <div class="text-center">
             @if (isset($_SESSION["errors"]) && isset($_GET["msg"]))
@@ -28,18 +28,18 @@
             @endif
         </div>
 
-        <form action="{{route('store')}}" method="POST" class="col-5 mx-auto">
+        <form action="{{route('update/'.$data->id)}}" method="POST" class="col-5 mx-auto">
             <div class="mb-3">
                 <label class="form-label fw-semibold">Name:</label>
-                <input type="text" class="form-control" name="name">
+                <input type="text" class="form-control" name="name" value="{{$data->name}}">
             </div>
             <div class="mb-3">
                 <label class="form-label fw-semibold">Status:</label>
-                <input type="number" class="form-control" name="status">
+                <input type="number" class="form-control" name="status" value="{{$data->status}}">
             </div>
             <div class="mb-3 text-end">
                 <a href="{{route('list')}}" class="btn btn-secondary">List</a>
-                <button type="submit" name="btn-add" class="btn btn-primary">Add</button>
+                <button type="submit" name="btn-save" class="btn btn-primary">Save</button>
             </div>
         </form>
     </section>

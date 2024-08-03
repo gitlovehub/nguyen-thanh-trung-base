@@ -1,6 +1,6 @@
 <?php 
 
-const DBNAME        = "demodb";
+const DBNAME        = "php2_nguyenthanhtrung_db";
 const DBUSER        = "root";
 const DBPASSWORD    = "";
 const DBHOST        = "127.0.0.1";
